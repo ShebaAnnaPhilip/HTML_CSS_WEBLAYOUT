@@ -1,0 +1,125 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+}
+
+/* CSS-Grid layout */
+.grid-parent {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header' 'main' 'aside';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr minmax(80px, auto);
+      grid-template-rows: auto 1fr minmax(80px, auto);
+  height: 100vh;
+}
+
+@media (min-width: 900px) {
+  .grid-parent {
+        grid-template-areas: 'header header' 'main aside';
+    -ms-grid-columns: 1fr 300px;
+        grid-template-columns: 1fr 300px;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+    grid-gap: 0;
+  }
+}
+
+/* Header */
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #a9b8bc;
+  background: -webkit-gradient(linear, left top, right top, from(#a9b8bc), color-stop(55%, #4fa7df), to(#d8e3e3));
+  background: linear-gradient(90deg, #a9b8bc 0%, #4fa7df 55%, #d8e3e3 100%);
+  color: #fff;
+  padding: 0 16px;
+}
+
+/* Main content area */
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  padding: 0 16px;
+  background-color: #f1f2f3;
+}
+
+/* Side bar */
+.aside {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: aside;
+  background-color: #a9adb1;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.h1Box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* Search Box with search bar and icon */
+.searchBox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+  border: none;
+}
+
+i {
+  font-style: normal;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  background: #323232;
+  left: -35px;
+  position: relative;
+  top: 1px;
+}
+
+i:hover {
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+}
+
+input {
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: relative;
+}
+
+input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+}
+/*# sourceMappingURL=style.css.map */
